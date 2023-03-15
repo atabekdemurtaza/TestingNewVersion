@@ -1,6 +1,7 @@
 {% extends '_base.html' %}
 {% load crispy_forms_tags %}
 {% load i18n %}
+{% load socialaccount %}
 
 {% block title %}
     {% trans "Register" %}
@@ -12,5 +13,8 @@
         {% csrf_token %}
         {{ form|crispy }}
         <button class="btn btn-success" type="submit">{% trans "Register" %}</button>
+        <p>If you have a github account you may register with
+            <a href="{% provider_login_url 'github' %}">GitHub</a>
+        </p>
     </form>
 {% endblock %}
