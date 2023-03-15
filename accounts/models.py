@@ -16,5 +16,4 @@ def update_user_profile(sender, setting, value, **kwargs):
 
 def post_save_receiver(sender, instance, created, **kwargs):
     print('Added a user')
-
 post_save.connect(post_save_receiver, sender=settings.AUTH_USER_MODEL)
