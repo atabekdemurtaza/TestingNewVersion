@@ -1,9 +1,12 @@
 {% extends '_base.html' %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Home{% endblock %}
+{% block title %}
+    {% trans 'Home' %}
+{% endblock %}
 
 {% block content %}
-    <h1>This is our home page.</h1>
+    <h1>{% trans 'This is our home page' %}</h1>
     <img class="bookcover" src="{% static 'images/dfp.jpg' %}" alt="">
 {% endblock %}
